@@ -1,18 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const getDate = () =>{
-  const todayDate = new Date();
-  return todayDate.getDay();
+class Header extends Component {
+  render(){
+    return(
+      <header>
+        <div>
+          <h1>Enter random number</h1>
+          <input type='text'></input>
+        </div>
+      </header>
+    )
+
+  }
 }
-
-const user = {
-  name: 'Adil',
-  lastname: 'Hannouni',
-  age:17
-}
-
-const Header = () =>{
-  return <div>Our guest is {user.name}</div>
-}
-
 export default Header;
