@@ -3,19 +3,23 @@ import '../css/styles.css'
 
 class Header extends Component {
 
-// inputChangeHandler(){
-//     console.log('I got clicked');
-//   };
+  state={
+    keyword: 'Wednesday'
+  }
+
 inputChangeHandler(event){
-  console.log(event);
+  this.setState({
+    keyword: event.target.value
+  })
 }  
 
   render(){
+    console.log(this.state.keyword)
     return(
       <header>
         <div>
           <h1 className='logo' onClick={this.inputChangeHandler}>Enter random number</h1>
-          <input type='text' onChange={this.inputChangeHandler}></input>
+          <input type='text' onChange={this.inputChangeHandler.bind(this)}></input>
         </div>
       </header>
     )
